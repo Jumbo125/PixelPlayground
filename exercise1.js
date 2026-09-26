@@ -47,5 +47,7 @@ drawPixel(99,99,"blue")
 checkPixel(0,0, "red", "checkPixel(0,0)")
 checkPixel(1,1, "black", "checkPixel(1,1)")
 
+
+
 // reset
 clearScreen("black");

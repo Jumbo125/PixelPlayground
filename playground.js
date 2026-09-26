@@ -1,4 +1,12 @@
 clearScreen("black");
 drawPixel(20, 20, "blue");
-drawHorizontalLine(10, 10, "green");
-console.log("hello World");
+drawHorizontalLine(10, 20, "green");
+drawHorizontalLine(20, 40, "orange");
+drawHorizontalLine(30, 60, "red");
+drawHorizontalLine(40, 80, "orange");
+drawHorizontalLine(50, 100, "green");
+drawHorizontalLine(60, 80, "orange");
+drawHorizontalLine(70, 60, "red");
+drawHorizontalLine(80, 40, "orange");
+drawHorizontalLine(90, 20, "green");
+console.log("Das ist super");
