@@ -20,8 +20,9 @@ function getPixel(x, y) {
 }
 
 function checkPixel(x, y, expected, label) {
-  let actual = getPixel(x, y)
-  if (actual !== expected) console.error(`FAIL: ${label} -> expected "${expected}", got "${actual}"`);
+  let actual = getPixel(x, y);
+  if (actual !== expected)
+    console.error(`FAIL: ${label} -> expected "${expected}", got "${actual}"`);
 }
 
 function drawPixel(x, y, color) {
@@ -29,25 +30,27 @@ function drawPixel(x, y, color) {
   ctx.fillRect(x, y, 1, 1);
 }
 
-function drawHorizontalLine(x, y, color) {
-    drawPixel(x, y, color);
-    drawPixel(x+1, y, color);
-    drawPixel(x+2, y, color);
-    drawPixel(x+3, y, color);
-    drawPixel(x+4, y, color);
+function drawHorizontalLine(x, y, color, length) {
+  for (let i = 0; i <= length; i++){
+  drawPixel(x+i, y, color);
+  }
+}
+
+function drawVerticalLine(x, y, color, length) {
+ for (let i = 0; i <= length; i++){
+  drawPixel(x, y+i, color);
+  }
 }
 
 clearScreen("black");
 
-// test code 
-drawPixel(0,0,"red")
-drawPixel(50,50,"green")
-drawPixel(99,99,"blue")
+// test code
+drawPixel(0, 0, "red");
+drawPixel(50, 50, "green");
+drawPixel(99, 99, "blue");
 
-checkPixel(0,0, "red", "checkPixel(0,0)")
-checkPixel(1,1, "black", "checkPixel(1,1)")
-
-
+checkPixel(0, 0, "red", "checkPixel(0,0)");
+checkPixel(1, 1, "black", "checkPixel(1,1)");
 
 // reset
 clearScreen("black");
